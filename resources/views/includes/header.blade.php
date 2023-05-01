@@ -26,6 +26,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">Зарегистрироваться</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register-manager') }}">Зарегистрировать менеджера</a>
+                    </li>
                 @endif
             </ul>
         </div>
