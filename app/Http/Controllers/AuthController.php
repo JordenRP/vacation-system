@@ -10,6 +10,13 @@ class AuthController extends Controller
 {
     public function showLoginForm()
     {
+        if (Auth::check()) {
+            if (Auth::user()->role === 'manager') {
+                return redirect('/manager');
+            } else {
+                return redirect('/employee');
+            }
+        }
         return view('auth.login');
     }
 
